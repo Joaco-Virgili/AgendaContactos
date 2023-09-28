@@ -1,0 +1,14 @@
+<div id="ubi">
+    <div class="container">
+        <form>
+            <input type="text" name="user" id="user" placeholder="Usuario" autocomplete="username" minlength="4">
+            <input type="email" name="email" id="email" placeholder="Email" autocomplete="email" minlength="4">
+            <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="current-password" minlength="8">
+            <input type="password" name="repeat-password" id="repeat-password" placeholder="Repetir contraseña" autocomplete="repeat-password" minlength="8">
+            <button type="submit" (click)="register()">Iniciar sesión</button>
+        </form>
+        <div id="sin-cuenta">
+            <p>¿Ya tenés una cuenta? - <a [routerLink]="['/login']" routerLinkActive="router-link-active" >Inicia sesión</a></p>
+        </div>
+    </div>
+</div>

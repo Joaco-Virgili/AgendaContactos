@@ -1,0 +1,33 @@
+$alto-header: 150px;
+$alto-footer: 25px;
+$alto-body: calc( 100vh - $alto-header - $alto-footer);
+
+$color-principal-50: #fdfce5;
+$color-principal-100: #faf8c0;
+$color-principal-200: #f6f296;
+$color-principal-300: #f3ed6b;
+$color-principal-400: #efe947;
+$color-principal-500: #ece41b;
+$color-principal-600: #eed315;
+$color-principal-700: #eebb02;
+$color-principal-800: #eea300;
+$color-principal-900: #ec7900;
+
+$color-acento-50: #e9e9ff;
+$color-acento-100: #c6c7fe;
+$color-acento-200: #9ea3fe;
+$color-acento-300: #707eff;
+$color-acento-400: #495ffe;
+$color-acento-500: #093ffa;
+$color-acento-600: #0235ee;
+$color-acento-700: #0028e1;
+$color-acento-800: #0018d7;
+$color-acento-900: #0000c8;
+
+$color-fondo: linear-gradient(135deg, orange 60%, cyan);
+
+$color-error: red;
+
+$color-fondo: white;
+$color-texto: rgb(36, 36, 36);
+$color-texto-invertido: rgb(254, 254, 254);

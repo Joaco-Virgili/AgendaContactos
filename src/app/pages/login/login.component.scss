@@ -1,0 +1,68 @@
+@use './../../../assets/style/variables.scss';
+
+#ubi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    height: 300px;
+    width: 400px;
+    border: 1px solid variables.$color-acento-700;
+    background-color: variables.$color-principal-200;
+    position: relative;
+    z-index: 1;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        height: auto;
+        input {
+            height: 20px;
+            width: 100%;
+            border: 1px solid variables.$color-principal-700;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        button {
+            height: 30px;
+            width: 100%;
+            border: 1px solid variables.$color-acento-700;
+            border-radius: 10px;
+            background-color: variables.$color-principal-700;
+            color: variables.$color-texto;
+            font-weight: bold;
+            cursor: pointer;
+            &:hover {
+                background-color: variables.$color-principal-900;
+                color: variables.$color-texto-invertido;
+            }
+        }
+        p{
+            border: none;
+            font-size: 12px;
+            color: variables.$color-error;
+        }
+    }
+    #sin-cuenta {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        a{
+            text-decoration: none;
+            color: variables.$color-acento-700;
+        }
+    }
+}
+

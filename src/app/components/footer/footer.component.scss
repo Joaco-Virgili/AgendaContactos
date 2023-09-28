@@ -1,0 +1,12 @@
+@use './../../../assets/style/variables.scss';
+.container{
+    background-color: variables.$color-principal-700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: variables.$alto-footer;
+    p{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
