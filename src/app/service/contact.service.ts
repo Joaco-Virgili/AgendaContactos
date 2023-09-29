@@ -8,7 +8,7 @@ import { API } from '../constants/api';
 export class ContactsService {
 
   async create(contacto:Contacto):Promise<boolean>{
-    console.warn("Método no implementado");
+    if(contacto.id) return false;
     const res = await fetch(API+'contactos',{
       method:'POST',
       headers:{
@@ -20,15 +20,22 @@ export class ContactsService {
   };
 
   async delete(id:number):Promise<boolean>{
-    console.warn('Método no implementado')
     const res = await fetch(API+'contactos/'+id,{
       method:'DELETE'
     })
     return res.ok
   };
   
-  edit(){
-    throw("Método no implementado");
+  async edit(contacto:Contacto):Promise<boolean>{
+    if(!contacto.id) return false;
+    const res = await fetch(API+'contactos',{
+      method:'PUT',
+      headers:{
+        "Content-type":"application/json"
+      },
+      body: JSON.stringify(contacto)
+    })
+    return res.ok
   };
   
   async getAll():Promise<Contacto[]>{

@@ -3,10 +3,8 @@
     <div class="container">
         <form #loginForm="ngForm" (ngSubmit)="login()">
             <input type="text" placeholder="Usuario" name="user" id="user" ngModel>
-            <p *ngIf="!loginForm.value.user" class="error">*Este campo es requerido</p>
             <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="current-password" required minlength="8" ngModel>
-            <p class="error" *ngIf="loginForm.value.password.length < 8">*La contraseña tiene que tener un mínimo de 8 caracteres</p>
-            <button type="submit">Iniciar sesión</button>
+            <button type="submit" [routerLink]="['/contacts']" routerLinkActive="router-link-active">Iniciar sesión</button>
         </form>
         <div id="sin-cuenta">
             <p>¿No tienes cuenta?
