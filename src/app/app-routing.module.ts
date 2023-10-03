@@ -14,7 +14,10 @@ const routes: Routes = [
     path:'contacts',
     loadChildren: () => import('./pages/contacts/contacts.module').then(m => m.ContactsModule)
   },
-  
+  {
+    path:'contacts/:id',
+    loadChildren: () => import('./pages/detalle-contacto/detalle-contacto.module').then(m => m.DetalleContactoModule)
+  },
   {
     path:'**',
     redirectTo: 'error'

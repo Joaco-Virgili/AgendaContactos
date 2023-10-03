@@ -39,7 +39,7 @@ export class ContactsService {
   };
   
   async getAll():Promise<Contacto[]>{
-    const res = await fetch(API+"contactos.json");
+    const res = await fetch(API+"contacts.json");
     const resJson = await res.json();
     return resJson;
   };

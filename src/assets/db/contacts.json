@@ -6,7 +6,7 @@
       "direccion": "Juan Manuel de Rosas 456",
       "email": "test@test.com",
       "telefono": "12345678",
-      "img": "./../../../assets/img/logo.png",
+      "img": "",
       "empresa": "puntoJson"
     },
     {

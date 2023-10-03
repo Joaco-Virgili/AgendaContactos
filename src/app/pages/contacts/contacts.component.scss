@@ -1,0 +1,12 @@
+@use "./../../../assets/style/variables.scss";
+
+.fab{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+}
+
+dialog{
+    border: none;
+    border-radius: 25px;
+}
