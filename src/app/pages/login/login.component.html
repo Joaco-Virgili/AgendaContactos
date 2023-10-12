@@ -1,15 +1,20 @@
-
 <div id="ubi">
-    <div class="container">
-        <form #loginForm="ngForm" (ngSubmit)="login()">
-            <input type="text" placeholder="Usuario" name="user" id="user" ngModel>
-            <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="current-password" required minlength="8" ngModel>
-            <button type="submit" [routerLink]="['/contacts']" routerLinkActive="router-link-active">Iniciar sesión</button>
-        </form>
-        <div id="sin-cuenta">
-            <p>¿No tienes cuenta?
-                <a [routerLink]="['/register']" routerLinkActive="router-link-active">Registrate</a>
-            </p>
+    <div id="container">
+        <div id="ubi-form">
+            <h1>INICIO SESIÓN</h1>
+            <form>
+                <div id="ingreso">
+                    <input type="text" placeholder="Ususario">
+                </div>
+                <div id="ingreso">
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <button type="submit" (click)="login()">Ingresar</button>
+            </form>
+            <div id="sin-cuenta">
+                <p>¿No tienes cuenta? - <a [routerLink]="['/register']">Registrate</a></p>
+            </div>
         </div>
+        <img src="./../../../assets/image/Designer.png" alt="">
     </div>
 </div>

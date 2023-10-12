@@ -1,14 +1,26 @@
 <div id="ubi">
-    <div class="container">
-        <form>
-            <input type="text" name="user" id="user" placeholder="Usuario" autocomplete="username" minlength="4">
-            <input type="email" name="email" id="email" placeholder="Email" autocomplete="email" minlength="4">
-            <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="current-password" minlength="8">
-            <input type="password" name="repeat-password" id="repeat-password" placeholder="Repetir contraseña" autocomplete="repeat-password" minlength="8">
-            <button type="submit" (click)="register()">Iniciar sesión</button>
-        </form>
-        <div id="sin-cuenta">
-            <p>¿Ya tenés una cuenta? - <a [routerLink]="['/login']" routerLinkActive="router-link-active" >Inicia sesión</a></p>
+    <div id="container">
+        <img src="./../../../assets/image/Designer.png" alt="">
+        <div id="ubi-form">
+            <h1>NUEVO USUSARIO</h1>
+            <form>
+                <div id="ingreso">
+                    <input type="text" placeholder="Ususario">
+                </div>
+                <div id="ingreso">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div id="ingreso">
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <div id="ingreso">
+                    <input type="password" placeholder="Repetir contraseña">
+                </div>
+                <button type="submit" (click)="register()">Registrarse</button>
+            </form>
+            <div id="sin-cuenta">
+                <p>¿Ya tienes cuenta? - <a [routerLink]="['/login']">Inicia sesión</a></p>
+            </div>
         </div>
     </div>
 </div>
