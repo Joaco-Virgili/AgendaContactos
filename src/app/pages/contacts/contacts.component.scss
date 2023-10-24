@@ -4,6 +4,14 @@
     position: fixed;
     bottom: 40px;
     right: 20px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: xx-large;
+    background-color: variables.$color-acento-600;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 dialog{
