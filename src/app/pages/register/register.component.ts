@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { RegisterData } from 'src/app/interface/user';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -11,8 +12,15 @@ export class RegisterComponent {
   authService = inject(AuthService)
   router = inject(Router);
 
+  registerData: RegisterData = {
+    nameDeUsuario: "",
+    name: "",
+    lastName: "",
+    contrasenia: "",
+  }
+
   register(){
-    this.authService.register();
-    this.router.navigate(["/login"])
+    this.authService.register(this.registerData);
+    //this.router.navigate(["/login"])
   }
 }

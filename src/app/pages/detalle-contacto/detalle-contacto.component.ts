@@ -59,15 +59,7 @@ export class DetalleContactoComponent implements OnInit{
               )
             }
           });
-
-         
         }
       })
-
-
     }
-    
-  
-  
-
 }

@@ -1,8 +1,8 @@
 [
     {
       "id": 1,
-      "nombre": "Gonzalo",
-      "apellido": "Bechara",
+      "name": "Gonzalo",
+      "lastName": "Bechara",
       "direccion": "Juan Manuel de Rosas 456",
       "email": "test@test.com",
       "telefono": "12345678",
@@ -11,8 +11,8 @@
     },
     {
       "id": 2,
-      "nombre": "Lionel",
-      "apellido": "Messi",
+      "name": "Lionel",
+      "lastName": "Messi",
       "direccion": "Pellegrini 1150",
       "email": "email@email.com",
       "telefono": "123456",
@@ -21,8 +21,8 @@
     },
     {
       "id": 3,
-      "nombre": "Sin",
-      "apellido": "Foto",
+      "name": "Sin",
+      "lastName": "Foto",
       "direccion": "Juan Manuel de Rosas 456",
       "email": "test@test.com",
       "telefono": "12345678",

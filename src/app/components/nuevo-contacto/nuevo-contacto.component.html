@@ -2,11 +2,11 @@
     <form #form="ngForm" (ngSubmit)="onSubmit()">
         <h2>{{contacto.id ? "Editar contacto" : "Nuevo contacto"}}</h2>
         <div class="input">
-            <label for="">Nombre</label>
-            <input type="text" [(ngModel)]="contacto.nombre" name="nombre" [(ngModel)]="contacto.nombre" name="nombre">
+            <label for="">name</label>
+            <input type="text" [(ngModel)]="contacto.nombre" [(ngModel)]="contacto.nombre" name="nombre">
         </div>
         <div class="input">
-            <label for="">Apellido</label>
+            <label for="">lastName</label>
             <input type="text" [(ngModel)]="contacto.apellido" name="apellido">
         </div>
         <div class="input">
