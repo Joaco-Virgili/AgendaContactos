@@ -19,9 +19,15 @@ export class RegisterComponent {
   }
 
   async register(){
-    this.authService.register(this.registerData).then(res => {
-      if(res.ok) this.router.navigate(["/login"]);
-    });
+    try{
+      const res = await this.authService.register(this.registerData);
+      if(res.ok) {
+        this.router.navigate(["/login"])
+      }
+      
+    } catch(err) {
+      console.warn('Error registrando', err)
+    }
   }
 }
 

@@ -5,13 +5,13 @@
             <h1>NUEVO USUSARIO</h1>
             <form #registerForm="ngForm" (ngSubmit)="register()">
                 <div id="ingreso">
-                    <input type="text" placeholder="Ususario">
+                    <input type="text" [(ngModel)]="registerData.UserName" name="UserName" #UserName="ngModel" placeholder="Ususario">
                 </div>
                 <div id="ingreso">
-                    <input type="email" placeholder="Email">
+                    <input type="email" [(ngModel)]="registerData.Email" name="Email" #Email="ngModel" placeholder="Email">
                 </div>
                 <div id="ingreso">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="password" [(ngModel)]="registerData.Password" name="Password" #Password="ngModel" placeholder="Contraseña">
                 </div>
                 <button type="submit">Registrarse</button>
             </form>

@@ -4,7 +4,7 @@ import { AuthService } from '../service/auth.service';
 
 export const usuarioLogueadoGuard: CanActivateFn =  (route, state) => {
   const auth = inject(AuthService);
-  if(auth.token()){
+  if(!auth.token()){
     const router = inject(Router);
     router.navigate(['login']);
     return false;
