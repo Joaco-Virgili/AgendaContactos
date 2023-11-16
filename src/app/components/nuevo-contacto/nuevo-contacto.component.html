@@ -3,23 +3,23 @@
         <h2>{{contacto.id ? "Editar contacto" : "Nuevo contacto"}}</h2>
         <div class="input">
             <label for="">name</label>
-            <input type="text" [(ngModel)]="contacto.nombre" [(ngModel)]="contacto.nombre" name="nombre">
+            <input type="text" [(ngModel)]="contacto.name" [(ngModel)]="contacto.name" name="nombre">
         </div>
         <div class="input">
             <label for="">lastName</label>
-            <input type="text" [(ngModel)]="contacto.apellido" name="apellido">
+            <input type="text" [(ngModel)]="contacto.lastName" name="apellido">
         </div>
         <div class="input">
             <label for="">Direccion</label>
-            <input type="text" [(ngModel)]="contacto.direccion" name="direccion">
+            <input type="text" [(ngModel)]="contacto.address" name="direccion">
         </div>
         <div class="input">
             <label for="">Numero telefono</label>
-            <input type="text" [(ngModel)]="contacto.telefono" name="telefono">
+            <input type="text" [(ngModel)]="contacto.number" name="telefono">
         </div>
         <div class="input">
             <label for="">Empresa</label>
-            <input type="text" [(ngModel)]="contacto.empresa" name="empresa">
+            <input type="text" [(ngModel)]="contacto.company" name="empresa">
         </div>
         <div class="input">
             <label for="">Email</label>
@@ -27,7 +27,7 @@
         </div>
         <div class="input">
             <label for="">Foto</label>
-            <input type="text" [(ngModel)]="contacto.img" name="img" id=""> 
+            <input type="text" [(ngModel)]="contacto.image" name="img" id=""> 
         </div>
         <div class="boton">
             <button type="submit">{{contacto.id ? "Editar" : "Crear"}}</button>

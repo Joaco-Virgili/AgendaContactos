@@ -13,14 +13,16 @@ export class RegisterComponent {
   router = inject(Router);
 
   registerData: RegisterData = {
-    nameDeUsuario: "",
-    name: "",
-    lastName: "",
-    contrasenia: "",
+    UserName: "",
+    Email: "",
+    Password: "",
   }
 
-  register(){
-    this.authService.register(this.registerData);
-    //this.router.navigate(["/login"])
+  async register(){
+    this.authService.register(this.registerData).then(res => {
+      if(res.ok) this.router.navigate(["/login"]);
+    });
   }
 }
+
+

@@ -2,14 +2,20 @@
     <div id="container">
         <div id="ubi-form">
             <h1>INICIO SESIÓN</h1>
-            <form>
+            <form #loginForm="ngForm" (ngSubmit)="login()">
                 <div id="ingreso">
-                    <input type="text" placeholder="Ususario">
+                    <input type="text" name="user" id="user" [(ngModel)]="loginData.Email" #user="ngModel"
+                        placeholder="Usuario" autocomplete="username"
+                        required>
+                    <p *ngIf="user.invalid && (user.dirty || user.touched)" class="error">Este campo es requerido</p>
                 </div>
                 <div id="ingreso">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="password" name="password" id="password" placeholder="Contraseña"
+                        autocomplete="current-password" required minlength="8" [(ngModel)]="loginData.Password"  #password="ngModel">
+                    <p class="error" *ngIf="password.invalid && (password.dirty || password.touched)">La contraseña tiene que tener un mínimo de 8 caracteres</p>
                 </div>
-                <button type="submit" (click)="login()">Ingresar</button>
+                <button type="submit">Iniciar sesión</button>
+                <p *ngIf="errorLogin()" class="error">Error al iniciar sesión</p>
             </form>
             <div id="sin-cuenta">
                 <p>¿No tienes cuenta? - <a [routerLink]="['/register']">Registrate</a></p>
