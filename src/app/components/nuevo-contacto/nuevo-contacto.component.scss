@@ -1,4 +1,66 @@
 @use './../../../assets/style/variables.scss';
 
 
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 300px;
+}
 
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    h2{
+        font-size: x-large;
+    }
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    label{
+        font-weight: bold;
+    }
+    input{
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+}
+
+.boton{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:5px 
+}
+
+#especial{
+    background-color: variables.$color-acento-500;
+    color: black;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 100ms;
+    &:hover{
+        filter: brightness(0.8);
+    }
+}
+
+#cerrar{
+    color: black;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 100ms;
+    &:hover{
+        filter: brightness(0.8);
+    }
+}

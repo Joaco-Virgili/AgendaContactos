@@ -30,8 +30,8 @@
             <input type="text" [(ngModel)]="contacto.image" name="img"> 
         </div>
         <div class="boton">
-            <button type="submit">{{contacto.id ? "Editar" : "Crear"}}</button>
-            <button type="button" (click)="cerrar.emit()">Cancelar</button>
+            <button id="especial" type="submit">{{contacto.id ? "Editar" : "Crear"}}</button>
+            <button id="cerrar" type="button" style="background-color: rgb(163, 163, 163);" (click)="cerrar.emit()">Cancelar</button>
         </div>
     </form>
 </div>
