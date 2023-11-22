@@ -14,18 +14,18 @@ export class ContactsService extends ApiService {
       method:'POST',
       headers:{
         "Content-type":"application/json",
-        Authorization: "Bearer "+this.auth.token
+        Authorization: "Bearer "+this.auth.token()
       },
       body: JSON.stringify(contacto)
     })
     return res.ok
   };
 
-  async delete(id:number):Promise<boolean>{
-    const res = await fetch(API+'Contact/'+id,{
-      method:'DELETE',
-      headers:{
-        Authorization: "Bearer "+this.auth.token
+  async delete(id: number): Promise<boolean> {
+    const res = await fetch(API + 'Contact/' + id, {
+      method: 'DELETE',
+      headers: {
+        Authorization: "Bearer " + this.auth.token()
       },
     })
     return res.ok
