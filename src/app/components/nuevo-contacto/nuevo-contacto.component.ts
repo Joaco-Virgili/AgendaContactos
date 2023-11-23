@@ -15,6 +15,7 @@ import { generarMensajeError, generarMensajeExito } from 'src/app/helpers/messeg
 export class NuevoContactoComponent {
   contactsService = inject(ContactsService);
   @Output() cerrar = new EventEmitter();
+  @Output() newContact = new EventEmitter<Contacto>();
   @Input() contacto:Contacto = {
     id: 0,
     name: '',
@@ -27,6 +28,7 @@ export class NuevoContactoComponent {
     userId: 0
   }
 
+
   async onSubmit(){
     this.contacto.id ?
     this.editarContacto() :
@@ -38,6 +40,7 @@ export class NuevoContactoComponent {
     this.cerrar.emit();
     if(res){
       generarMensajeExito('Contacto agregado');
+      this.newContact.emit(this.contacto)
     } else {
       generarMensajeError('Error agregando contacto');
     }

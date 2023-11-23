@@ -8,5 +8,5 @@
 <button class="fab" (click)="dialogNuevoContacto.showModal()">+</button>
 
 <dialog method="dialog" #dialogNuevoContacto>
-    <app-nuevo-contacto (cerrar)="dialogNuevoContacto.close()"></app-nuevo-contacto>
+    <app-nuevo-contacto (newContact)="addContact($event)" (cerrar)="dialogNuevoContacto.close()"></app-nuevo-contacto>
 </dialog>

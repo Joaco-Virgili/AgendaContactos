@@ -3,10 +3,9 @@
 #boton-back{
   position: fixed;
   padding: 5px;
-  height: 50px;
   margin-top: 10px;
   margin-left: 10px;
-  border-radius: 25px;
+  border-radius: 50%;
   cursor: pointer;
   border: 1px black solid;
   background-color: variables.$color-acento-500;

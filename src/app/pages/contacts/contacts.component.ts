@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { Contacto } from 'src/app/interface/contacto';
 import { ContactsService } from 'src/app/service/contact.service';
 
@@ -19,5 +19,7 @@ export class ContactsComponent implements OnInit {
     })
   }
 
-
+  addContact(contacto : Contacto): void{
+    this.contactos.push(contacto)
+  }
 }

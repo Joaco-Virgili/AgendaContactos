@@ -1,4 +1,5 @@
 import { Component, Inject, Input, inject, signal } from '@angular/core';
+import { flatMap } from 'rxjs';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { AuthService } from 'src/app/service/auth.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  auth = inject(AuthService);  
+  auth = inject(AuthService);
+  
 }
 
